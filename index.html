@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>owiahmed Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="head" title="owiahmed">
+                <i  class="fa fa-shopping-cart" aria-hidden="true"></i> owiahmed<span class="halfHead">Store<sup style="font-size:40%; color: white;">&reg</sup>
+                </span>
+            </h1>
+            <button class="logInBtnNavBar" title="Log in" onclick="showSide();">
+                <i class="fa fa-sign-in" aria-hidden="true"> </i> LOG IN
+            </button>
+        </div>
+        <div id="loginArea" class="area">
+            <a href="javascript:void(0)" title="Close" class="closebtn" onclick="closeSide()">&times;</a>
+            <button class="panelBtn" title="Login On Admin Panel" onclick="a();">Admin Panel</button>
+            <br />
+            <button class="panelBtn" title="Login On Employee Panel" onclick="e();">Customer Login</button>
+        </div>
+        <div class="adminPanelLogin" id="adminLogin">
+            <a href="javascript:void(0)" title="Close" class="closebtn" onclick="closeSideOfAdminLogin()">&times;</a>
+            <h1 class="headd" title="SamooStore">
+                <i class="fa fa-shopping-basket"></i> owiahmed<span class="halfHead">Store<sup style="font-size:40%; color: white;">&reg</sup>
+                </span>
+            </h1>
+            <p class="panels">ADMIN PANEL</p>
+            <i class="fa fa-angle-double-down"></i>
+            <div class="signUpForm">
+                <p class="signUpHeading">LOG IN</p>
+                <p id="error2">You have entered a wrong email or password!</p>
+                <form action="JavaScript:void(0)" onsubmit="adminLogin();">
+                    <label class="text">Email
+                        <br />
+                        <input type="email" class="input" placeholder="Email..." required="required" id="emailM" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="text">Password
+                        <br />
+                        <input type="password" class="input" placeholder="Password..." required="required" id="passwordM" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <input type="submit" value="LOG IN" class="submitBtn">
+                </form>
+        
+                <div id="display1">
+                    <i class="fa fa-spinner"></i> Logging in...</div>
+            </div>
+        </div>
+
+        <div class="employeePanelLogin" id="employeeLogin">
+            <a href="javascript:void(0)" title="Close" class="closebtn" onclick="closeSideOfEmployeeLogin()">&times;</a>
+            <h1 class="headd" title="SamooStore">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> owiahmed<span class="halfHead">Store<sup style="font-size:40%; color: white;">&reg</sup>
+                </span>
+            </h1>
+            <p class="panels">BUYER ACCOUNT</p>
+            <i class="fa fa-angle-double-down"></i>
+            <div class="signUpForm">
+                <p class="signUpHeading">SIGN UP</p>
+                <form action="JavaScript:void(0)" onsubmit="signUpEmployee();">
+                    <label class="text">Full Name
+                        <br />
+                        <input type="text" class="input" placeholder="Full Name..." required="required" id="fullName" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="text">Email
+                        <br />
+                        <input type="email" class="input" placeholder="Email..." required="required" id="email" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="text">Password
+                        <br />
+                        <input type="password" class="input" placeholder="Password..." required="required" id="password" onfocus="this.className += ' inputfocus'"
+                            onblur="this.className='input'">
+                    </label>
+                    <br />
+                    <label class="agreement">
+                        <input type="checkbox" required="required"> Accept the terms and polices.</label>
+                    <br />
+                    <input type="submit" value="SIGN UP" class="submitBtn">
+                </form>
+                <div id="display">
+                    <i class="fa fa-spinner"></i> Signing up...</div>
+                <hr  style="width:70%; opacity:0.5; size:0.5px">
+                <p class="acc">Already have an account?</p>
+                <button class="loginbtn" onclick="setInterval(function(){location = 'employelogin.html'},'1000')">LOG IN</button>
+            </div>
+        </div>
+        <div class="intro">
+            <h1 class="welcomeHead" id="a">owiahmed Store!</h1>
+            <p class="welcomeSubHead">We are leading marketing store in Pakistan.</p>
+            <a href="#knowMore"><button class="subScribeBtn"><i class="fa fa-angle-double-down" style="color:#454955"></i> ABOUT US!</button></a>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="s1.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="s2.jpg" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="s3.jpg" class="d-block w-100" alt="">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        
+
+
+        <div class="abot" id="about">
+            <div id="knowMore"class="img" title="owiahmed"><img src="ab.jpg" width="150px;" height="150px;"></div>
+            <h1 class="samoohead" title="KyrieStore">owiahmed Store</h1>
+            <p class="bio"><span class="coma">❝</span> We are leading marketing store in Pakistan.Our store was first opened in 4 January 2022. We have all types of products which a store should have. Name of Our MEMBER is Owais and Safdar. Rating given by our customers to us is 9.5/10<span class="coma"> ❞</span> </p>
+        </div>
+        <div class="footer">
+            <p class="footerr">@COPYRIGHTS-2022-23. Design by Owais and Safdar.</p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="sweetalert2.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
